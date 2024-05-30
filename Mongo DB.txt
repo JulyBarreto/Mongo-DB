@@ -1,0 +1,201 @@
+MONGO DB
+
+***Nos permite visualizar las base de datos que se encuentran en Mongo
+show databases
+
+
+***Muestra la BD que se está utilizando
+db.getName()
+
+
+*** Usar la BD Centro de Acopios
+use BD_Centos_de_Acopios
+
+
+***Inserción de datos
+
+Collection Centro_Acopio:
+
+var CA1 = 
+  {
+    ID_Centro_Acopio: 334,
+    Nombre_Centro_Acopio: 'Taquería El Lobo',
+    Tipo: 'Particular',
+    Necesidades: 'cualquiera',
+    Nombre_Contacto: 'Antonio Arroyo',
+    Telefono: 2147483647,
+    Calle: 'Invierno ',
+    Horarios: '13:00 a 2:00am viernes y sábados y los otros días ',
+    Tipo_Centro_Acopio: 'Si lo quieren dejar en otro horario nos pueden llamar y nosotros: A) v'
+  }
+
+*** insertOne permite insertar un documento en una colección
+db.Centro_de_Acopio.insertOne(CA1)
+
+var CA2 = 
+  {
+    ID_Centro_Acopio: 1,
+    Nombre_Centro_Acopio: 'Beyork Loreto',
+    Tipo: 'Particular',
+    Necesidades: 'agua, alimentos, medicinas',
+    Nombre_Contacto: 'Abraham Magaña',
+    Telefono: 2147483647,
+    Calle: 'Calle Altamirano',
+    Tipo_Centro_Acopio: 'Club Nocturno'
+  }
+
+var CA3 = 
+  {
+    ID_Centro_Acopio: 10,
+    Nombre_Centro_Acopio: 'Gimnasio G3',
+    Tipo: 'Particular',
+    Necesidades: 'alimentos enlatados, sopa en bolsa, aceite, frijoles enlatados, jabón en polvo, ',
+    Telefono: 2147483647,
+    Calle: 'Calle k 15',
+    Horarios: '24 horas',
+    Tipo_Centro_Acopio: 'Deportivo'
+  }
+
+var CA4 = 
+  {
+    ID_Centro_Acopio: 11,
+    Nombre_Centro_Acopio: 'Liga Maya',
+    Tipo: 'Institución Pública',
+    Necesidades: 'cualquiera',
+    Nombre_Contacto: 'Claudia Vazquez',
+    Telefono: 2147483647,
+    Calle: 'Av. 5 de Mayo esquina Calzada de los Leones',
+    Horarios: '9 :00 am - 22 :00',
+    Tipo_Centro_Acopio: 'Deportivo'
+  }
+
+var CA5 =
+  {
+    ID_Centro_Acopio: 12,
+    Nombre_Centro_Acopio: 'Boulevard de la Luz ',
+    Tipo: 'Particular',
+    Necesidades: 'alimento para bebés, cobijas, medicamentos, herramientas',
+    Nombre_Contacto: 'Jimena Piñuela',
+    Telefono: 2147483647,
+    Calle: 'Boulevard de la Luz',
+    Horarios: 'a partir de las 8am',
+    Tipo_Centro_Acopio: 'Casa'
+  }
+
+*** insertMany permite insertar varios documentos en una coleccion
+db.Centro_de_Acopio.insertMany([CA2, CA3, CA4, CA5])
+
+
+Collection Datos_de_Ingreso:
+
+var DI1 = 
+ {
+    ID_Ingresos: 770,
+    Estatus: null,
+    Verificado_por: 'mntsrt ',
+    Fecha_Actualizacion: ISODate('2017-09-26T00:00:00.000Z'),
+    Actualizado_por: 'Clara'
+  }
+
+*** insertOne permite insertar un documento en una colección
+db.Datos_de_Ingreso.insertOne(CA1)
+
+var DI2 = 
+  {
+    ID_Ingresos: 180,
+    Estatus: null,
+    Fecha_Actualizacion: ISODate('2017-09-25T00:00:00.000Z'),
+    Actualizado_por: 'Leonel'
+  }
+
+var DI3 = 
+  {
+    ID_Ingresos: 770,
+    Estatus: null,
+    Verificado_por: 'mntsrt ',
+    Fecha_Actualizacion: ISODate('2017-09-26T00:00:00.000Z'),
+    Actualizado_por: 'Clara'
+  }
+
+var DI4 = 
+  {
+    ID_Ingresos: 372,
+    Estatus: null,
+    Verificado_por: 'Paco Ocampo',
+    Fecha_Actualizacion: ISODate('2017-09-24T00:00:00.000Z'),
+    Actualizado_por: 'N/A'
+  }
+
+var DI5 = 
+  {
+    ID_Ingresos: 830,
+    Estatus: null,
+    Verificado_por: 'mntsrt',
+    Fecha_Actualizacion: ISODate('2017-09-26T00:00:00.000Z'),
+    Actualizado_por: 'mntsrt'
+  }
+
+*** insertMany permite insertar varios documentos en una coleccion
+db.Datos_de_Ingreso.insertMany([DI2, DI3, DI4, DI5])
+
+
+Collection Ubicación
+
+var U1 = 
+  {
+    ID_Exterior: 29,
+    Colonia: 'Noche Buena',
+    Municipio: 'Benito Juárez',
+    Ciudad: 'Ciudad de México',
+    Direccion: 'Augusto Rodín 241, Noche Buena, Ciudad de México, CDMX'
+  }
+
+*** insertOne permite insertar un documento en una colección
+db.Ubicacion.insertOne(U1)
+
+var U2 = 
+  {
+    ID_Exterior: 552,
+    Colonia: 'Del Valle',
+    Municipio: 'Benito Juárez',
+    Ciudad: 'Ciudad de México',
+    Direccion: 'Mier y Pesado 349, Del Valle, Ciudad de México, CDMX'
+  }
+
+var U3 = 
+  { 
+    ID_Exterior: 524,'Amanda'
+    Colonia: 'Narvarte',
+    Municipio: 'Benito Juárez',
+    Ciudad: 'Ciudad de México',
+    Direccion: 'Concepción Beistegui 1104, Narvarte, Ciudad de México, CDMX'
+  }
+
+var DI4 = 
+  {
+    ID_Ingresos: 372,
+    Estatus: null,
+    Verificado_por: 'Paco Ocampo',
+    Fecha_Actualizacion: ISODate('2017-09-24T00:00:00.000Z'),
+    Actualizado_por: 'N/A'
+  }
+
+var DI5 = 
+  {
+    ID_Exterior: 25, 'N/A'
+    Colonia: 'Clavería',
+    Municipio: 'Azcapotzalco',
+    Ciudad: 'Ciudad de México',26a348eed65c'),
+    Direccion: 'Av. Clavería 81, Clavería, Ciudad de México, CDMX'
+  }
+
+*** insertMany permite insertar varios documentos en una coleccion
+db.Ubicacion.insertMany([U2, U3, U4, U5])
+
+
+***Mostrar los datos que se encuentran en las Collection
+
+db.Centro_de_Acopio.find()
+db.Datos_de_Ingreso.find()
+db.Ubicacion.find()
+
